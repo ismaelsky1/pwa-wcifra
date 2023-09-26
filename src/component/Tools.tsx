@@ -1,5 +1,4 @@
-import { useCallback, useEffect, useState } from 'react';
-import '../App.css';
+import { useCallback, useEffect } from 'react';
 import { RiMic2Fill, RiRefreshFill, RiPauseFill } from 'react-icons/ri';
 
 //@ts-ignore
@@ -35,9 +34,9 @@ const Tools = ({ setTranscript, setListening }: Props) => {
 
   return (
     <div className="text-center h-full pb-3">
-      {!listening && <button onClick={() => { SpeechRecognition.startListening({ language: 'pt-br', continuous: true }) }} className='flex-none rounded-full border-none bg-slate-200 p-3 mr-4'><RiMic2Fill size={40} /></button>}
-      {listening && <button onClick={() => { SpeechRecognition.stopListening() }} className='flex-none rounded-full border-none bg-slate-200 p-3 mr-4'><RiPauseFill size={40} /></button>}
-      <button onClick={() => { reset() }} className='flex-none rounded-full border-none bg-slate-200 p-3'><RiRefreshFill size={40} /></button>
+      {!listening && <button onClick={() => { SpeechRecognition.startListening({ language: 'pt-br', continuous: true }) }} className='flex-none rounded-full border-none bg-orange-600 p-3 mr-4'><RiMic2Fill color='#fff' size={40} /></button>}
+      {listening && <button onClick={() => { SpeechRecognition.stopListening() }} className='flex-none rounded-full border-none bg-orange-600 p-3 mr-4'><RiPauseFill color='#fff' size={40} /></button>}
+      <button onClick={() => { reset() }} className='flex-none rounded-full border-none bg-orange-600 p-3'><RiRefreshFill color='#fff' size={40} /></button>
     </div>
   );
 }
