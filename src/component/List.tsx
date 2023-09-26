@@ -28,10 +28,13 @@ function List({ transcript, isListening }: Props) {
 
   return (
     <div className="h- overflow-visible">
+      {dataList.length === 0 && <div>
+        <p className='text-orange-600 font-bold text-2xl text-center'> QMusicas </p>
+      </div>}
       <ul className="divide-y divide-orange-300">
-        {dataList.map((item: any,idx:number) => (
+        {dataList.map((item: any, idx: number) => (
           <li key={`${idx}-${item.u}`} >
-            <a className="flex justify-between gap-x-6 py-5" href={`https://www.cifraclub.com.br/${item.d}/${item.u}/`} >
+            <a target="_blank" className="flex justify-between gap-x-6 py-5" href={`https://www.cifraclub.com.br/${item.d}/${item.u}/`} >
               <div className="flex min-w-0 gap-x-4">
                 <img className="h-12 w-12 flex-none rounded-full bg-orange-50"
                   src={`https://akamai.sscdn.co/letras/115x115/fotos/${item.i}`}
@@ -49,6 +52,7 @@ function List({ transcript, isListening }: Props) {
             </a>
           </li>
         ))}
+
       </ul>
     </div>
   );
