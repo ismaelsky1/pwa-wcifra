@@ -34,7 +34,7 @@ function List({ transcript, isListening }: Props) {
       <ul className="divide-y divide-orange-300">
         {dataList.map((item: any, idx: number) => (
           <li key={`${idx}-${item.u}`} >
-            <a target="_blank" className="flex justify-between gap-x-6 py-5" href={`https://www.cifraclub.com.br/${item.d}/${item.u}/`} >
+            <a className="flex justify-between gap-x-6 py-5" href={`https://www.cifraclub.com.br/${item.d}/${item.u}/`} >
               <div className="flex min-w-0 gap-x-4">
                 <img className="h-12 w-12 flex-none rounded-full bg-orange-50"
                   src={`https://akamai.sscdn.co/letras/115x115/fotos/${item.i}`}
