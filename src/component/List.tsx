@@ -29,7 +29,7 @@ function List({ transcript, isListening }: Props) {
   return (
     <div className="h- overflow-visible">
       {dataList.length === 0 && <div>
-        <p className='text-orange-600 font-bold text-2xl text-center'> QMusicas </p>
+        <p className='text-orange-700 font-bold text-2xl text-center'> Q<span className='text-orange-600'>Cifras </span> </p>
       </div>}
       <ul className="divide-y divide-orange-300">
         {dataList.map((item: any, idx: number) => (
